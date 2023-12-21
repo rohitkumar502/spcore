@@ -10,6 +10,7 @@
   <name>spcore</name>
   <url>http://maven.apache.org</url>
 
+<!--  github repo url: https://github.com/rohitkumar502/spcore.git-->
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
