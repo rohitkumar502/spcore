@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd" >
+
+	<bean id="emp1" class= "org.ms.picollections.Emp" >
+		<property name="name" value="Nancy Rani" />
+
+		<property name="phones">
+			<list>
+				<value>123456</value>
+				<value>123457</value>
+				<value>123458</value>
+				<null/>
+			</list>
+		</property>
+
+		<property name="address">
+			<set>
+				<value>Bihar</value>
+				<value>Assam</value>
+				<value>Delhi</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="HTML" value="1 month"  />
+				<entry key="JavaScript" value="2 months"  />
+				<entry key="Java" value="3 months"  />
+			</map>
+		</property>
+
+		<property name="props">
+			<props>
+				<prop key="Name">Durgesh</prop>
+				<prop key="ChannelName">LearnCodeWithDurgesh</prop>
+			</props>
+		</property>
+
+	</bean>
+ 	
+ 	<bean id="emp2"
+		  class= "org.ms.picollections.Emp"
+		  p:name = "Pinki Sharma"
+		  p:phones = "#{ { '123456', 123457, 123458, null, 123456} }"
+		  p:address = "#{ {'Bihar', 'Delhi', 'Rohtak', 'Bangalore', 'Bihar'} }"
+		  p:courses = "#{ {'HTML' : '1 month', 'JavaScript': '2 months', 'Java': '3 months' } }"
+		  p:props = "#{ {'Name' : 'Rohit Kumar', 'College': 'MDU', 'Roll': 502 } }"
+	/>
+
+ 
+</beans>
